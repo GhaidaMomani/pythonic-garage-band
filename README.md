@@ -2,6 +2,12 @@
 # Overview
 This lab is about Creating a Garage Band with Object Oriented Programming.
 
+##############################################
+
+**PULL REQUEST**
+
+https://github.com/GhaidaMomani/pythonic-garage-band/pull/1
+
 
 <hr/>
     <p align="right">(<a href="#top">back to top</a>)</p>
