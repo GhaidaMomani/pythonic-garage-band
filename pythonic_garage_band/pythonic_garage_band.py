@@ -1,7 +1,11 @@
 from abc import abstractmethod
 
 
-class Musician:  # this class is to handle common functionality which particular kinds of musicians will inherit.
+class Musician:
+    """
+    this class is to handle common functionality which particular kinds of musicians will inherit
+    """
+
     def __init__(self, name):
         self.name = name
 
@@ -13,12 +17,18 @@ class Musician:  # this class is to handle common functionality which particular
         return f"{self.name}"
 
     @abstractmethod
-    def get_instrument(self):  # returns a string for each musician
+    def get_instrument(self):
+        """
+        returns a string for each musician
+        """
 
         pass
 
     @abstractmethod
-    def play_solo(self):  # returns a string for each musician
+    def play_solo(self):
+        """
+        returns a string for each musician
+        """
 
         pass
 
@@ -32,7 +42,11 @@ Each kind of Musician instance should have a play_solo method that returns strin
 """
 
 
-class Guitarist(Musician):  # this class named Guitarist inherts from Musician class
+class Guitarist(Muscian):
+    """
+    this class named Guitarist inherts from Musician class
+    """
+
     def __str__(self):
         return f"My name is {self.name} and I play guitar"
 
@@ -46,9 +60,16 @@ class Guitarist(Musician):  # this class named Guitarist inherts from Musician c
         return "face melting guitar solo"
 
 
-class Bassist(Musician):  # this class named Bassist inherts from Musician class
+class Bassist(Musician):
+    """
+    this class named Bassist inherts from Musician class
+    """
+
     def __str__(self):
-        return f"My name is {self.name} and I play bass"  # returns string which is the name
+        return f"My name is {self.name} and I play bass"
+        """ 
+        returns string which is the name
+        """
 
     def __repr__(self):
         return f"Bassist instance. Name = {self.name}"
@@ -82,17 +103,25 @@ class Band:
         self.members = members
         self.__class__.instances.append(self)
 
-    def __str__(self):  # returns a string with  band name
+    def __str__(self):
+        """
+        returns a string with  band name
+        """
 
         return f"This is the {self.name} band"
 
-    def __repr__(self):  # returns a string for the name of the band name
+    def __repr__(self):
+        """
+        returns a string for the name of the band name
+        """
 
         return f"{self.name}"
 
+    """ method that asks each member musician to play a solo, in the order they were added to band."""
+
     def play_solos(
         self,
-    ):  # method that asks each member musician to play a solo, in the order they were added to band.
+    ):
 
         solos = []
         for el in self.members:
@@ -100,6 +129,9 @@ class Band:
         return solos
 
     @classmethod
-    def to_list(cls):  # returns a list of previously created Band instances
+    def to_list(cls):
+        """
+        returns a list of previously created Band instances
+        """
 
         return cls.instances
