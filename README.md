@@ -17,5 +17,5 @@ https://github.com/GhaidaMomani/pythonic-garage-band/pull/1
 <p align="right">Jordan, Amman</p>
   <p align="right">22, 9 MAR </p>
 
-https://github.com/GhaidaMomani/pythonic-garage-band/pull/1
+
 
